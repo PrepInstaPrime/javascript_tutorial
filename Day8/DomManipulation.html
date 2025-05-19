@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation</title>
+</head>
+
+<body>
+    <div class="container">
+        <p id="p1">para1</p>
+        <p>Para2</p>
+        <p>Para3</p>
+        <p>Para4</p>
+        <p>Para5</p>
+    </div>
+    <div class="container">
+        <h1>this is heading</h1>
+    </div>
+    <div class="container1">
+        <p>hello this is 3rd container</p>
+        <h1>this is heading 1</h1>
+    </div>
+    <!-- internal js -->
+    <script>
+        /*
+        // id gives single element 
+        let para1=document.getElementById("p1");
+        // class gives collection of element
+        let allelements= document.getElementsByClassName("container")
+        console.log(para1)
+        console.log(allelements)
+        // accessing the element from collection
+        console.log(allelements[0])
+        console.log(allelements[1])
+        */
+        /*
+         // tag name gives u the collection
+         let allPara=document.getElementsByTagName('p');
+         console.log(allPara)
+         let oneElement=document.querySelector(".container")
+         console.log(oneElement)
+         let firstPara= document.querySelector('p')
+         console.log(firstPara)
+         // selecting all the elements which satisfy the condition
+         let allpara= document.querySelectorAll('p')
+         console.log(allPara)
+      */
+
+        //  above we have seen how we can select the elements , now the thing is how we can change the content
+        /*
+        let para1 = document.getElementById("p1");
+        console.log(para1)
+        console.log(para1.innerText)
+        para1.innerText="hello you are changed";
+        let container3= document.getElementsByClassName("container1")[0];
+        console.log(container3)
+        // container3.innerText="<p>hello this is new content<p>"
+        // what if we put innerHtml at the place of innerText
+        container3.innerHTML="<h1> hey this is new para<h1>"
+        // now we come to the conclusion that if we want to change the html we will use innerHTML, or for content we will use innerTEXT
+     */
+
+    //  now we know how we can select and change the content and html, but what if i want to change attributes
+    /*
+    let p1= document.getElementById('p1');
+    p1.setAttribute('class',"firstPara")
+    console.log(p1)
+    // updating the class name
+    p1.setAttribute("class","priyam")
+    // deleting attribute
+    p1.removeAttribute("class")
+    */
+
+    // can we  change css using js : yes
+    let firstPara= document.getElementById('p1')
+    firstPara.style.color="red";
+    firstPara.style.backgroundColor="yellow"
+    firstPara.style.display="inline"
+
+    </script>
+</body>
+
+</html>
