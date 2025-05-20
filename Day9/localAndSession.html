@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #user-data {
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black;
+            margin: 25%;
+            padding: 10px;
+            width: 38%;
+            text-align: left;
+            position: absolute;
+            z-index: 2;
+            background-color: black;
+            color: antiquewhite;
+            border-radius: 10px;
+        }
+
+        input,
+        label {
+            margin: 10px;
+        }
+        button{
+            margin-top: 10px;
+            width: 100px;
+            height: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="user-data">
+        <div class="name">
+            <label for="fname">First Name: </label>
+            <input type="text" name="" value="" id="fname">
+            <label for="lname">Last Name: </label>
+            <input type="text" name="" id="lname"><br>
+        </div>
+        <div class="contact">
+            <label for="email">Email: </label>
+            <input type="text" name="" id="email">
+            <label for="Phone">Phone: </label>
+            <input type="text" name="" id="Phone"> <br>
+        </div>
+        <div class="bio">
+            <label for="age">Age: </label>
+            <input type="text" name="" id="age">
+        </div>
+        <button>Submit</button>
+    </form>
+  <script>
+    let userData=document.querySelector('form');
+    let fname=document.getElementById('fname');
+    let lname=document.getElementById('lname');
+    
+    userData.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        localStorage.setItem('fname',fname.value);
+        localStorage.setItem('lname',lname.value);
+        sessionStorage.setItem('fname',fname.value);
+        sessionStorage.setItem('lname',lname.value);
+        console.log(fname.value,lname.value)
+    })
+  </script>
+</body>
+</html>
